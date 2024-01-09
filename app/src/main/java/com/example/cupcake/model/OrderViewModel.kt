@@ -33,5 +33,6 @@ class OrderViewModel : ViewModel() {
         _date.value = pickupDate
     }
 
+    fun hasNoFlavorSet(): Boolean = _flavor.value.isNullOrEmpty()
 
 }
