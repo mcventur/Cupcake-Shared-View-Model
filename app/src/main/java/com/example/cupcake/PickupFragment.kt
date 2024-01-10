@@ -51,12 +51,13 @@ class PickupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            nextButton.setOnClickListener { goToNextScreen() }
+            //nextButton.setOnClickListener { goToNextScreen() }
             viewModel = sharedViewModel
             //lifeCycleOwner permite que el fragmento se subscriba a los cambios en tiempo real de los LiveData del ViewModel
             //en este fragmento es muy interesante porque se actualiza el precio en tiempo real, dependiendo de si se selecciona
             //o no la fecha de hoy como fecha de recogida
             lifecycleOwner = viewLifecycleOwner
+            pickupFragment = this@PickupFragment
         }
     }
 
